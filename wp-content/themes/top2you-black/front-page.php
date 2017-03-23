@@ -38,12 +38,14 @@
 				<div class="slick-slider-nav">
 				  	<?php
 				  		foreach ( $slider as $slide ) {
+
+				  			//print_r($slide);
 				  			?>
 							  <div class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
 							  	<img src="<?php echo bloginfo('template_url'); ?>/img/thumb-height.jpg">
 							  	<div class="text">
-								  	<h5>PEDRO WAENGERTNER</h5>
-								  	<h6>CEO da ACE (Aceleratech)</h6>
+								  	<h5><?php echo $slide['speaker']; ?></h5>
+								  	<h6><?php echo $slide['cargo']; ?></h6>
 							  	</div>
 							  </div>
 				  			<?php
@@ -92,7 +94,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h4 style="color: #fff;"><?php echo CFS()->get( 'eventos_titulo' ) ?></h4>
+						<!-- <h4 style="color: #fff;"><?php //echo CFS()->get( 'eventos_titulo' ) ?></h4> -->
 					</div>
 				</div>
 				<div class="row">
@@ -137,18 +139,9 @@
 										</div>
 									</a>
 									<a href="<?php echo $evento->url ?>" class="card-body">
-										<h4><?php 
-											if ( mysql2date( 'Ymd', $evento->start->local ) !== mysql2date( 'Ymd', $evento->end->local ) ) {
-												echo 'MÚLTIPLAS DATAS';
-											} else {
-												$date_format = get_option( 'date_format' );
-												$time_format = get_option( 'time_format' );
-												$combined_format = apply_filters( 'eventbrite_date_time_format', $date_format . ', ' . $time_format, $date_format, $time_format );
-												echo mysql2date( $combined_format, $evento->start->local );
-											}
-											
-										?></h4>
-										<h5><?php echo $evento->post_title ?></h5>
+										<?php
+										$tit = explode('-', $evento->post_title);
+										 isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
 									</a>
 									<div class="card-footer">
 										<?php 
