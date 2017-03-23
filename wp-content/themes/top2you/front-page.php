@@ -5,54 +5,59 @@
 	$slider = CFS()->get( 'slider' );
 	if ( count( $slider ) ) {
 		?>
-		<div class="container-outer container-slider border-fade">
-			<div class="slick-slider">
-				<div class="slick-slider-for">
-				  	<?php 
-				  		$i = 0;
-				  		foreach ( $slider as $slide ) {
-				  			?>
+		<div id="banner-home" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="indicators">
+		  		<div class="container">
+			  		<div class="row">
+			  			<div class="col-sm-10  col-sm-push-1">
+			  				<div class="pull-right">
+			  					<ol class="carousel-indicators">
+			  						<?php for ( $i = 0; $i < count( $slider ); $i++ ) { ?>
+			  							<li data-target="#banner-home" data-slide-to="<?php echo $i; ?>"<?php echo ( 0 === $i ) ? ' class="active"' : ''; ?>></li>
+			  						<?php } ?>
+							  	</ol>
+			  				</div>
+			  			</div>
+			  		</div>
+		  		</div>
+		  	</div>
+		  	<div class="carousel-inner" role="listbox">
+			  	<?php 
+			  		$i = 0;
+			  		foreach ( $slider as $slide ) {
+			  			?>
+					    <div class="item<?php echo ( 0 === $i++ ) ? ' active' : ''; ?>">
 					    	<div class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
-					      		<div class="text">
-					      			<div class="container">
-					      				<div class="row">
-						      				<div class="col-sm-5 col-sm-push-6 content">
-						      					<?php echo $slide['texto'] ?>
-						      					<?php if ( 0 === strpos( $slide['botao']['url'], '#' ) ) { ?>
-						      						<a href="#" data-toggle="modal" data-target="<?php echo $slide['botao']['url'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></a>
-						      					<?php } else { ?>
-						      						<a href="<?php echo $slide['botao']['url'] ?>" target="<?php echo $slide['botao']['target'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></a>
-						      					<?php } ?>
-						      				</div>
-						      			</div>
-					      			</div>
-					      		</div>
+					    		<div class="container">
+						    		<img src="<?php echo get_template_directory_uri() ?>/img/banner_height.jpg">
+						    		<div class="visible-xs text-right">
+						    			<?php if ( 0 === strpos( $slide['botao']['url'], '#' ) ) { ?>
+						    				<a href="#" data-toggle="modal" data-target="<?php echo $slide['botao']['url'] ?>" class="btn btn-success" style="margin: 10px;"><?php echo $slide['botao']['text'] ?></a>
+						    			<?php } else { ?>
+						    				<a href="<?php echo $slide['botao']['url'] ?>" target="<?php echo $slide['botao']['target'] ?>" class="btn btn-success" style="margin: 10px;"><?php echo $slide['botao']['text'] ?></a>
+						    			<?php } ?>
+						    		</div>
+					    		</div>
 					    	</div>
-				  			<?php
-				  		}
-				  	?>
-				</div>
-			</div>
-
-			<div class="container-outer border-fade" style="position: relative;">
-				<div class="slick-slider-nav">
-				  	<?php
-				  		foreach ( $slider as $slide ) {
-				  			?>
-							  <div class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
-							  	<img src="<?php echo bloginfo('template_url'); ?>/img/thumb-height.jpg">
-							  	<div class="text">
-								  	<h5>PEDRO WAENGERTNER</h5>
-								  	<h6>CEO da ACE (Aceleratech)</h6>
-							  	</div>
-							  </div>
-				  			<?php
-				  		}
-				  	?>
-				</div>
-				<a href="#" class="slick-slider-prev"><i class="fa fa-angle-left"></i></a>
-				<a href="#" class="slick-slider-next"><i class="fa fa-angle-right"></i></a>
-			</div>
+				      		<div class="text">
+				      			<div class="container">
+				      				<div class="row">
+					      				<div class="col-sm-6 col-sm-push-6 content">
+					      					<?php echo $slide['texto'] ?>
+					      					<?php if ( 0 === strpos( $slide['botao']['url'], '#' ) ) { ?>
+					      						<a href="#" data-toggle="modal" data-target="<?php echo $slide['botao']['url'] ?>" class="btn btn-success hidden-xs"><?php echo $slide['botao']['text'] ?></a>
+					      					<?php } else { ?>
+					      						<a href="<?php echo $slide['botao']['url'] ?>" target="<?php echo $slide['botao']['target'] ?>" class="btn btn-success hidden-xs"><?php echo $slide['botao']['text'] ?></a>
+					      					<?php } ?>
+					      				</div>
+					      			</div>
+				      			</div>
+				      		</div>
+					    </div>
+			  			<?php
+			  		}
+			  	?>
+		  	</div>
 		</div>
 		<?php
 	}	
@@ -73,7 +78,6 @@
 		</section>
 		<?php
 	}
-
 
 	// Eventos
 	$eventos = eventbrite_get_events( array(
@@ -203,25 +207,6 @@
 		</section>
 		<?php
 	}
-
-
-?>
-<section>
-	<div class="container">
-		<div class="zoom">
-			<img src="<?php echo bloginfo('template_url'); ?>/img/gift.jpg" class="img-responsive">
-		</div>
-	</div>
-</section>
-
-<section class="banner-blog" style="background-image: url(<?php echo bloginfo('template_url'); ?>/img/banner-blog.jpg);">
-	<div class="container">
-		<h4>Conheça o nosso blog</h4>
-		<a href="#">leia mais <i class="fa fa-angle-right"></i></a>
-	</div>
-</section>
-<?php
-
 
 
 	// Formulário de cadastro
