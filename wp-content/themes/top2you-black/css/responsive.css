@@ -160,6 +160,11 @@
         display: block;
     }
 
+    .border-fade:before,
+    .border-fade:after {
+        width: 40px;
+    }
+
     .news .form-control {
         margin-bottom: 10px;
     }
