@@ -422,7 +422,7 @@ section {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 50%;
+	height: 35%;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e1d1b+0,1e1d1b+100&0+0,1+98 */
 	background: -moz-linear-gradient(top,  rgba(30,29,27,0) 0%, rgba(30,29,27,1) 98%, rgba(30,29,27,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  rgba(30,29,27,0) 0%,rgba(30,29,27,1) 98%,rgba(30,29,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -729,6 +729,7 @@ footer {
 footer .top {
 	padding: 50px 0;
 	text-align: center;
+	border-bottom: 1px solid #363636;
 }
 
 footer .top h4 {
@@ -772,6 +773,112 @@ footer .social .icon {
     top: 7px;
 }
 
+footer .midle {
+	padding: 60px 0;
+}
+
+footer .footer-menu {
+	text-align: center;
+}
+
+footer .footer-menu ul {
+	display: inline-block;
+	margin: 0 0 15px;
+	padding: 0;
+}
+
+footer .footer-menu ul:before,
+footer .footer-menu ul:after {
+	display: table;
+	content: "";
+}
+
+footer .footer-menu ul:after {
+	clear: both;
+}
+
+footer .footer-menu ul li {
+	list-style: none;
+	float: left;
+}
+
+footer .footer-menu ul li a {
+	font-size: 14px;
+	font-weight: 100;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin: 0 5px;
+}
+
+footer .footer-menu p {
+	font-size: 11px;
+	font-weight: 300;
+	color: #666666;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+footer .info {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+}
+
+footer .footer-midle:before,
+footer .footer-midle:after {
+	display: table;
+	content: "";
+}
+
+footer .footer-midle:after {
+	clear: both;
+}
+
+footer .midle .col {
+  height: 180px;
+  line-height: 180px;
+  position: relative;
+  float: left;
+  width: calc((100% - 520px)/2);
+  width: -webkit-calc((100% - 520px)/2);
+  width: -moz-calc((100% - 520px)/2);
+  width: -ms-calc((100% - 520px)/2);
+  width: -o-calc((100% - 520px)/2);
+}
+
+footer .midle .col:nth-child(2) {
+	width: 520px;
+    border: 1px solid #333333;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+footer .midle .col * {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+footer .midle .col:last-child {
+	text-align: right;
+}
+
+footer .midle .col:last-child .info {
+	text-align: left;
+}
+
+footer .bottom {
+	padding-bottom: 60px;
+}
+
+footer .bottom p {
+	font-size: 14px;
+	line-height: 22px;
+	color: #fff;
+	font-weight: 100;
+	text-align: center;
+	padding: 0 5px;
+}
 
 /*MODAL*/
 .modal-backdrop.in {
