@@ -90,11 +90,11 @@
 	if ( isset( $eventos->events ) AND is_array( $eventos->events ) ) {
 		$i = 0;
 		?>
-		<section id="eventos" style="background-color: #727272;">
+		<section id="eventos">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h4 style="color: #fff;"><?php echo CFS()->get( 'eventos_titulo' ) ?></h4>
+						<!-- <h4 style="color: #fff;"><?php //echo CFS()->get( 'eventos_titulo' ) ?></h4> -->
 					</div>
 				</div>
 				<div class="row">
@@ -139,18 +139,9 @@
 										</div>
 									</a>
 									<a href="<?php echo $evento->url ?>" class="card-body">
-										<h4><?php 
-											if ( mysql2date( 'Ymd', $evento->start->local ) !== mysql2date( 'Ymd', $evento->end->local ) ) {
-												echo 'MÚLTIPLAS DATAS';
-											} else {
-												$date_format = get_option( 'date_format' );
-												$time_format = get_option( 'time_format' );
-												$combined_format = apply_filters( 'eventbrite_date_time_format', $date_format . ', ' . $time_format, $date_format, $time_format );
-												echo mysql2date( $combined_format, $evento->start->local );
-											}
-											
-										?></h4>
-										<h5><?php echo $evento->post_title ?></h5>
+										<?php
+										$tit = explode('-', $evento->post_title);
+										 isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
 									</a>
 									<div class="card-footer">
 										<?php 
