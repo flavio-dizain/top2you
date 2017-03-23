@@ -141,7 +141,7 @@
 									<a href="<?php echo $evento->url ?>" class="card-body">
 										<?php
 										$tit = explode('-', $evento->post_title);
-										 isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
+										echo isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
 									</a>
 									<div class="card-footer">
 										<?php 
