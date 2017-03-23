@@ -38,12 +38,14 @@
 				<div class="slick-slider-nav">
 				  	<?php
 				  		foreach ( $slider as $slide ) {
+
+				  			//print_r($slide);
 				  			?>
 							  <div class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
 							  	<img src="<?php echo bloginfo('template_url'); ?>/img/thumb-height.jpg">
 							  	<div class="text">
-								  	<h5>PEDRO WAENGERTNER</h5>
-								  	<h6>CEO da ACE (Aceleratech)</h6>
+								  	<h5><?php echo $slide['speaker']; ?></h5>
+								  	<h6><?php echo $slide['cargo']; ?></h6>
 							  	</div>
 							  </div>
 				  			<?php
