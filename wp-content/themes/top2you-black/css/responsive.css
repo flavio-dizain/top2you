@@ -59,37 +59,42 @@
         width: auto;
         display: inline-block;
     }
+
+    .card h4 {
+        font-size: 22px;
+    }
+    .card h5 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .slick-slider-for h4 {
+        font-size: 24px;
+        line-height: 34px;
+    }
 }
 
 @media (max-width: 767px) {
     .navbar {
         min-height: 95px;
     }
+
     .navbar-brand>img {
         max-width: 215px;
     }
-    #banner-home .text {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        transform: none;
-        transform: none;
-        transform: none;
-        transform: none;
-        transform: none;
-        background-color: #a3a3a3;
-        padding: 10px 0;
+
+    .slick-slider .text,
+    .slick-slider-prev,
+    .slick-slider-next {
+        display: none !important
     }
-    #banner-home h4 {
-        font-size: 18px;
-        line-height: 28px;
-        margin: 0 0 10px;
-        font-weight: 500;
+
+    .slick-slider-nav .background {
+        height: auto;
     }
-    #banner-home p {
-        margin: 0 0 10px;
-        font-size: 14px;
+
+    .slick-slider-nav .background img {
+        display: block;
     }
 
     .news .form-control {
@@ -103,6 +108,11 @@
 
     .modal-dialog {
         width: auto;
+    }
+
+    h2,
+    .banner-blog h4 {
+        font-size: 25px;
     }
 
 }
