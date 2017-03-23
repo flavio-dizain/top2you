@@ -165,6 +165,10 @@
         display: block;
     }
 
+    .slick-slider-for .background:after, .slick-slider-nav .background:after {
+        height: 60%;
+    }
+
     .slick-slider-for .text-mob {display: block;}
 
     .border-fade:before,

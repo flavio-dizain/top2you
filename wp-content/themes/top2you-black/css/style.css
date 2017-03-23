@@ -401,6 +401,7 @@ section {
     text-align: center;
     width: 100%;
     color: #fff;
+    z-index: 99;
 }
 
 .slick-slider-for .text-mob h2 {
@@ -415,7 +416,8 @@ section {
     text-shadow: 0px 0px 40px #000000;
     text-transform: uppercase;
     letter-spacing: 0.045em;
-    line-height: 30px;
+    line-height: 32px;
+    margin: 0 0 3px;
 }
 
 .slick-slider-for .text-mob h3 {
@@ -427,6 +429,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.045em;
     font-size: 22px;
+    line-height: 24px;
     margin: 0;
     color: rgba(255,255,255,0.5);
     text-shadow: 0px 0px 40px #000000;
@@ -557,6 +560,7 @@ section {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
 }
 
 .card:hover {
