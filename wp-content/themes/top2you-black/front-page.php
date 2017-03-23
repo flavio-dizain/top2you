@@ -88,7 +88,7 @@
 	if ( isset( $eventos->events ) AND is_array( $eventos->events ) ) {
 		$i = 0;
 		?>
-		<section id="eventos" style="background-color: #727272;">
+		<section id="eventos">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
