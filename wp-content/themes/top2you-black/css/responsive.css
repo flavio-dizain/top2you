@@ -74,6 +74,11 @@
         display: inline-block;
     }
 
+    .border-fade:before,
+    .border-fade:after {
+        width: 60px;
+    }
+
     .card h4 {
         font-size: 22px;
     }

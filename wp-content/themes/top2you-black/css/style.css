@@ -63,7 +63,7 @@ section {
 .border-fade:after {
 	display: block;
 	content: " ";
-	width: 60px;
+	width: 160px;
 	height: 100%;
 	position: absolute;
 	top: 0;
