@@ -165,6 +165,8 @@
         display: block;
     }
 
+    .slick-slider-for .text-mob {display: block;}
+
     .border-fade:before,
     .border-fade:after {
         width: 40px;
@@ -188,4 +190,22 @@
         font-size: 25px;
     }
 
+}
+
+@media (max-width: 580px) {
+    .slick-slider-for .text-mob{
+        bottom: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slick-slider-for .text-mob{
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 380px) {
+    .slick-slider-for .text-mob{
+        bottom: 80px;
+    }
 }

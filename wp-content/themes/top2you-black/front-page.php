@@ -27,6 +27,10 @@
 						      			</div>
 					      			</div>
 					      		</div>
+					      		<div class="text-mob">
+					      			<h2><?php echo $slide['speaker']; ?></h2>
+					      			<h3><?php echo $slide['cargo']; ?></h3>
+					      		</div>
 					    	</div>
 				  			<?php
 				  		}
