@@ -401,6 +401,22 @@ section {
 	position: relative;
 }
 
+.slick-slider-for .background:after,
+.slick-slider-nav .background:after {
+	display: block;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e1d1b+0,1e1d1b+100&0+0,1+98 */
+	background: -moz-linear-gradient(top,  rgba(30,29,27,0) 0%, rgba(30,29,27,1) 98%, rgba(30,29,27,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(30,29,27,0) 0%,rgba(30,29,27,1) 98%,rgba(30,29,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(30,29,27,0) 0%,rgba(30,29,27,1) 98%,rgba(30,29,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e1d1b', endColorstr='#1e1d1b',GradientType=0 ); /* IE6-9 */
+}
+
 .slick-slider-nav .background img {
 	visibility: hidden;
 	width: 100%;
@@ -412,6 +428,7 @@ section {
 	left: 0;
 	padding: 20px;
 	width: 100%;
+	z-index: 99;
 }
 
 .slick-slider-nav .background .text h5 {
