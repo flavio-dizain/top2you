@@ -805,10 +805,11 @@ footer .social {
 footer .social li {
 	list-style: none;
 	float: left;
+	margin: 0 18px;
 }
 
 footer .social a {
-	font-size: 30px;
+/*	font-size: 30px;
 	text-align: center;
 	color: #666666;
 	width: 50px;
@@ -818,8 +819,23 @@ footer .social a {
 	border: 1px solid #666666;
 	margin: 0 35px;
 	cursor: pointer;
-	display: block;
+	display: block;*/
 	text-decoration: none !important; 
+}
+
+footer .social .icon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.15em;
+    height: 2.15em;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: border 150ms ease, text-shadow 150ms ease;
 }
 
 footer .social a:hover {
@@ -828,8 +844,11 @@ footer .social a:hover {
 }
 
 footer .social .icon {
+    display: block;
     position: relative;
-    top: 7px;
+    color: rgba(255,255,255,0.5);
+    font-size: 27px;
+    padding: 13px;
 }
 
 footer .midle {
