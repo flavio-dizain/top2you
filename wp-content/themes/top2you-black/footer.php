@@ -16,6 +16,11 @@
 				</ul>
 			</div>
 		</div>
+			<div class="bottom">
+			<div class="container">
+				<p>A Top2You é uma aceleradora de desenvolvimento de pessoas. Acreditamos que uma conversa pode inspirar e encurtar distâncias, principalmente quando essa conversa é com alguém que já fez esse caminho e chegou lá. A Top2You te dá a chance de conversar com grandes nomes do mundo dos negócios, esportes e entretenimento de forma personalizada, focada em um assunto definido por você e utilizando uma tecnologia que torna isso simples e acessível.</p>
+			</div>
+		</div>
 		<div class="midle">
 			<div class="container">
 					<div class="footer-midle">
@@ -46,7 +51,7 @@
 							 			) ); 
 							 		?>
 								</ul>
-								<p><?php echo get_theme_mod( 'rodape_copyright' ); ?></p>
+								<p>&nbsp;<?php //echo get_theme_mod( 'rodape_copyright' ); ?></p>
 							</div>
 						</div>
 						<div class="col">
@@ -58,14 +63,15 @@
 									}
 									echo implode( ' <br> ', $endereco );
 								?>
+								<p><br>Contato: <a href="mailto:suporte@top2you.net">suporte@top2you.net</a></p>
 							</div>
 						</div>
 					</div>
 			</div>
 		</div>
-		<div class="bottom">
-			<div class="container">
-				<p>A Top2You é uma aceleradora de desenvolvimento de pessoas. Acreditamos que uma conversa pode inspirar e encurtar distâncias, principalmente quando essa conversa é com alguém que já fez esse caminho e chegou lá. A Top2You te dá a chance de conversar com grandes nomes do mundo dos negócios, esportes e entretenimento de forma personalizada, focada em um assunto definido por você e utilizando uma tecnologia que torna isso simples e acessível.</p>
+		<div>
+			<div class="container text-center">
+					<p style="margin: 0 0 30px;font-size: 12px;font-weight: 400;color: #999999;"><?php echo get_theme_mod( 'rodape_copyright' ); ?></p>
 			</div>
 		</div>
 	</footer>

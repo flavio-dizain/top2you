@@ -12,16 +12,16 @@
 				  		$i = 0;
 				  		foreach ( $slider as $slide ) {
 				  			?>
-					    	<div class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
+					    	<a href="<?php echo $slide['botao']['url'] ?>" target="_blank" class="background" style="background-image: url(<?php echo $slide['imagem'] ?>);">
 					      		<div class="text">
 					      			<div class="container">
 					      				<div class="row">
 						      				<div class="col-sm-5 col-sm-push-6 content">
 						      					<?php echo $slide['texto'] ?>
 						      					<?php if ( 0 === strpos( $slide['botao']['url'], '#' ) ) { ?>
-						      						<a href="#" data-toggle="modal" data-target="<?php echo $slide['botao']['url'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></a>
+						      						<div href="#" data-toggle="modal" data-target="<?php echo $slide['botao']['url'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></div>
 						      					<?php } else { ?>
-						      						<a href="<?php echo $slide['botao']['url'] ?>" target="<?php echo $slide['botao']['target'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></a>
+						      						<div href="<?php echo $slide['botao']['url'] ?>" target="<?php echo $slide['botao']['target'] ?>" class="btn btn-default hidden-xs"><?php echo $slide['botao']['text'] ?></div>
 						      					<?php } ?>
 						      				</div>
 						      			</div>
@@ -33,7 +33,7 @@
 					      				<h3><?php echo $slide['cargo']; ?></h3>
 					      			</div>
 					      		</div>
-					    	</div>
+					    	</a>
 				  			<?php
 				  		}
 				  	?>
@@ -199,7 +199,7 @@
 
 
 ?>
-<section>
+<section id="gift">
 	<div class="container">
 		<div class="zoom">
 			<img src="<?php echo bloginfo('template_url'); ?>/img/gift.jpg" class="img-responsive">

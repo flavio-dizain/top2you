@@ -1,6 +1,7 @@
 /*DEFAULT*/
 * {
 	outline: none !important;
+	letter-spacing: 1.2px;
 }
 
 html,
@@ -16,22 +17,22 @@ body {
 }
 
 h2 {
-	font-size: 32px;
-	font-weight: 100;
+	font-size: 31px;
+	font-weight: 400;
 	margin: 0 0 20px;
 	text-transform: uppercase;
 }
 
 h3 {
 	font-size: 28px;
-	font-weight: 100;
+	font-weight: 400;
 	line-height: 32px;
 	margin: 0 0 20px;
 }
 
 h4 {
 	font-size: 24px;
-	font-weight: 100;
+	font-weight: 400;
 	line-height: 35px;
 	margin: 0 0 20px;
 }
@@ -119,7 +120,7 @@ section {
 
 
 /*TYPE*/
-.text-light {font-weight: 300;}
+.text-light {font-weight: 400;}
 .text-regular {font-weight: 400;}
 .text-semi-bold {font-weight: 600;}
 .text-bold {font-weight: 700;}
@@ -131,7 +132,7 @@ section {
 	border: 1px solid #8c8c8c;
 	border-radius: 0;
 	color: #666666;
-	font-weight: 300;
+	font-weight: 400;
 	background-color: transparent;
 }
 
@@ -166,11 +167,11 @@ section {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
+/*
 .navbar-collapse.navbar-collapse[aria-expanded="true"] {
     min-height: 400px;
     max-height: 100%;
-}
+}*/
 
 .navbar-default {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e1d1b+0,1e1d1b+100&1+0,0+100 */
@@ -200,7 +201,7 @@ section {
 }
 
 .navbar-default .navbar-nav>li>a {
-	font-weight: 100;
+	font-weight: 400;
 	color: #fff !important;
 	position: relative;
 }
@@ -248,7 +249,7 @@ section {
 	border: 1px solid;
 	padding: 13px 40px;
 	font-size: 14px;
-	font-weight: 100;
+	font-weight: 400;
 	text-transform: uppercase;
 	border-radius: 3px;
 	-webkit-transition: all 0.3s ease;
@@ -268,7 +269,7 @@ section {
 	color: #8c8c8c;
   	background-color: #ffffff;
   	border-color: #ffffff;
-  	font-weight: 300;
+  	font-weight: 400;
 }
 
 .btn-danger {
@@ -360,7 +361,7 @@ section {
 
 .slick-slider-for h4 {
 	font-size: 30px;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 42px;
 	color: #fff;
 	margin: 0 0 25px;
@@ -368,7 +369,7 @@ section {
 
 .slick-slider-for p {
 	font-size: 25px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #fff;
 	margin: 0 0 25px;
 }
@@ -411,7 +412,7 @@ section {
     font: inherit;
     vertical-align: baseline;
     font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 500;
     text-shadow: 0px 0px 40px #000000;
     text-transform: uppercase;
@@ -424,14 +425,14 @@ section {
     margin: 0;
     padding: 0;
     border: 0;
-    font-weight: 300;
+    font-weight: 400;
     vertical-align: baseline;
     text-transform: uppercase;
     letter-spacing: 0.045em;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 17px;
+    line-height: 20px;
     margin: 0;
-    color: rgba(255,255,255,0.5);
+    color: rgb(215, 216, 216);
     text-shadow: 0px 0px 40px #000000;
 }
 
@@ -489,7 +490,7 @@ section {
 
 .slick-slider-nav .background .text h5 {
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #fefefe;
 	text-transform: uppercase;
 	margin: 0 0 5px;
@@ -497,7 +498,7 @@ section {
 
 .slick-slider-nav .background .text h6 {
 	font-size: 12px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #8b8b8b;
 	text-transform: uppercase;
 	margin: 0;	
@@ -545,6 +546,7 @@ section {
 	text-transform: uppercase;
 	margin: 0;
 	color: #ffffff;
+	line-height: 34px;
 }
 
 
@@ -553,7 +555,7 @@ section {
 	margin-bottom: 30px;
 	background-color: #fff;
 	position: relative;
-	border: 1px solid #8c8c8c;
+	/*border: 1px solid #8c8c8c;*/
 	overflow: hidden;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -561,6 +563,18 @@ section {
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.7);
+}
+
+.card:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+    z-index: 9;
 }
 
 .card:hover {
@@ -661,7 +675,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 .card .card-footer {
-	display: block;
+	display: none;
 	border-top: 1px solid #dddddd;
 }
 
@@ -691,7 +705,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .card .card-footer-left a {
 	font-size: 12px;
-	font-weight: 300;
+	font-weight: 400;
 	padding: 0 2px;
 }
 
@@ -728,7 +742,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .card h4 {
 	font-size: 28px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #fefefe;
 	text-transform: uppercase;
 	margin: 0 0 -5px 0;
@@ -736,7 +750,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .card h5 {
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #8b8b8b;
 	text-transform: uppercase;
 	line-height: 22px;
@@ -766,7 +780,7 @@ footer {
 	padding: 0;
 	font-size: 14px;
 	color: #ffffff;
-	font-weight: 100;
+	font-weight: 400;
 	line-height: 22px;
 }
 
@@ -778,6 +792,7 @@ footer .top {
 
 footer .top h4 {
 	margin: 0 0 35px;
+	text-transform: uppercase;
 }
 
 footer .social {
@@ -818,11 +833,13 @@ footer .social .icon {
 }
 
 footer .midle {
-	padding: 60px 0;
+	padding: 60px 0 30px;
 }
 
 footer .footer-menu {
 	text-align: center;
+	display: block !important;
+	line-height: 180px !important;
 }
 
 footer .footer-menu ul {
@@ -848,7 +865,7 @@ footer .footer-menu ul li {
 
 footer .footer-menu ul li a {
 	font-size: 14px;
-	font-weight: 100;
+	font-weight: 400;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin: 0 5px;
@@ -856,15 +873,15 @@ footer .footer-menu ul li a {
 
 footer .footer-menu p {
 	font-size: 11px;
-	font-weight: 300;
+	font-weight: 400;
 	color: #666666;
 	text-transform: uppercase;
 	margin: 0;
 }
 
 footer .info {
-	font-size: 14px;
-	font-weight: 300;
+	font-size: 12px;
+	font-weight: 400;
 	color: #999999;
 }
 
@@ -904,24 +921,33 @@ footer .midle .col * {
 }
 
 footer .midle .col:last-child {
-	text-align: right;
-}
-
-footer .midle .col:last-child .info {
 	text-align: left;
 }
 
+footer .midle .col:last-child .info {
+	float: right;
+	width: 226px;
+	position: relative;
+	top: 20px;
+}
+
 footer .bottom {
-	padding-bottom: 60px;
+	padding: 60px 0 0;
 }
 
 footer .bottom p {
 	font-size: 14px;
 	line-height: 22px;
 	color: #fff;
-	font-weight: 100;
-	text-align: center;
+	font-weight: 400;
+	/*text-align: center;*/
 	padding: 0 5px;
+}
+
+footer .info p a {
+    color: #999999;
+    position: relative;
+    top: -2px;
 }
 
 /*MODAL*/
@@ -1063,14 +1089,14 @@ footer .bottom p {
 
 .banner-blog h4 {
 	font-size: 32px;
-	font-weight: 100;
+	font-weight: 400;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin: 55px 0 20px;
 }
 
 .banner-blog a {
-	font-weight: 100;
+	font-weight: 400;
 	color: #ffffff;
 	text-transform: uppercase;
 	margin: 0;
