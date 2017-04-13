@@ -88,11 +88,11 @@
 		'show_series_parent' => true,
 		'page' => ( empty( $_GET['page'] ) ) ? 1 : absint( $_GET['page'] ),
 	), TRUE );
-	/*
-	echo '<!--';
-	print_r($eventos);
-	echo '-->';
-	*/
+	
+	/*echo '<!--';
+	echo $evento->end->local;
+	echo '-->';*/
+
 	if ( isset( $eventos->events ) AND is_array( $eventos->events ) ) {
 		$i = 0;
 		?>
@@ -107,48 +107,20 @@
 					<?php 
 						foreach ( $eventos->events as $evento ) { setup_postdata( $evento ); ?>
 
-							<?php echo $i % 2 == 0 ? '</div><div class="row">' : null ; ?>
-
+							<?php //echo $i % 2 == 0 ? '</div><div class="row">' : null ; ?>
+							<?php if($evento->ID != '33496830923')://'33496830923'): ?>
 							<div class="col-sm-6">
-								<div class="card">
-									<a href="<?php echo $evento->url ?>" class="card-header">
-										<?php
-										/*
-										<span class="price">
-										<?php 
-											$menor_preco = 0;
-											$gratis = FALSE;
-											foreach ( $evento->tickets as $ticket ) {
-												if ( 'AVAILABLE' == $ticket->on_sale_status ) {
-													if ( $ticket->free ) {
-														$gratis = TRUE;
-														break;
-													} elseif ( 0 === $menor_preco OR $menor_preco > $ticket->cost->major_value ) {
-														$menor_preco = $ticket->cost->major_value;
-													}
-												}
-											}
-											if ( $gratis ) {
-												echo 'GRÁTIS';
-											} else {
-												if ( count( $evento->tickets ) > 1 ) {
-													echo 'A PARTIR DE ';
-												}
-												echo 'R$'.absint( $menor_preco );
-											}
-										?>
-										</span>
-										*/
-										?>
+								<a href="<?php echo $evento->url ?>" target="_blank" class="card">
+									<div class="card-header">
 										<div class="image" style="background-image: url(<?php echo $evento->logo_url ?>);">
 											<img src="<?php echo get_template_directory_uri() ?>/img/card-height.jpg">
 										</div>
-									</a>
-									<a href="<?php echo $evento->url ?>" class="card-body">
+									</div>
+									<div class="card-body">
 										<?php
 										$tit = explode('-', $evento->post_title);
 										echo isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
-									</a>
+									</div>
 									<div class="card-footer">
 										<?php 
 											// Tags foram removidas (http://stackoverflow.com/questions/13380228/eventbrite-tags)
@@ -177,8 +149,9 @@
 											<a href="#"><i class="ico-bookmark"></i></a>
 										</div-->
 									</div>
-								</div>
+								</a>
 							</div>
+							<?php endif; ?>
 						<?php 
 
 						$i++; 
@@ -202,17 +175,17 @@
 <section id="gift">
 	<div class="container">
 		<div class="zoom">
-			<img src="<?php echo bloginfo('template_url'); ?>/img/gift.jpg" class="img-responsive">
+			<img src="<?php echo bloginfo('template_url'); ?>/img/banner_gift.jpg" class="img-responsive">
 		</div>
 	</div>
 </section>
 
-<section class="banner-blog" style="background-image: url(<?php echo bloginfo('template_url'); ?>/img/banner-blog.jpg);">
+<!-- <section class="banner-blog" style="background-image: url(<?php echo bloginfo('template_url'); ?>/img/banner-blog.jpg);">
 	<div class="container">
 		<h4>Conheça o nosso blog</h4>
 		<a href="#">leia mais <i class="fa fa-angle-right"></i></a>
 	</div>
-</section>
+</section> -->
 <?php
 
 
@@ -229,7 +202,9 @@
 						<h2><?php echo $formulario_titulo ?></h2>
 					<?php } ?>
 
-					<?php echo $formulario_form ?>
+					<?php $UID = md5(uniqid());  echo do_shortcode('[contact-form-7 id="17" title="Formulário de cadastro" v-code="'.$UID.'"]'); //echo $formulario_form  ?>
+
+					<?php echo "<!--"; echo $UID; echo "-->"; ?>
 				</div>
 			</div>
 		</section>
@@ -237,4 +212,81 @@
 	}
 ?>
 
-<?php get_footer();
+<div class="social-networks">
+	<div class="container">
+		<h4>Acompanhe a top2you nas redes sociais</h4>
+		<ul class="social">
+			<?php 
+	 			wp_nav_menu( array(
+	 				'theme_location' => 'redes-sociais', 
+	 				'container' => false, 
+	 				'items_wrap' => '%3$s',
+ 					'fallback_cb' => false,
+ 					'link_before' => '<i class="icon icon-social-',
+ 					'link_after' => '"></i>',
+	 			) ); 
+	 		?>
+		</ul>
+	</div>
+</div>
+
+<?php get_footer(); ?>
+<?php if(isset($_GET['news'])): if($_GET['news'] == 'ok'): ?>
+<!-- Modal -->
+<div id="myModal_yes" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cadastro de Newsletter</h4>
+      </div>
+      <div class="modal-body">
+        <p>Sua verificação foi realizada com sucesso. Aguarde novidades</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#myModal_yes').modal('show');
+		$('#myModal_yes').on('hidden.bs.modal', function () {
+		 	window.location.href = "<?php echo get_bloginfo('url'); ?>";
+		});
+	});
+</script>
+<?php endif; if($_GET['news'] == 'error'): ?>
+<!-- Modal -->
+<div id="myModal_no" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cadastro de Newsletter</h4>
+      </div>
+      <div class="modal-body">
+        <p>Erro ao verificar seu cadastro, favortente novamente mais tarde.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#myModal_no').modal('show');
+		$('#myModal_no').on('hidden.bs.modal', function () {
+		 	window.location.href = "<?php echo get_bloginfo('url'); ?>";
+		});
+	});
+</script>
+<?php endif; endif; ?>

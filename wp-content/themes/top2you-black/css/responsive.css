@@ -159,6 +159,53 @@
         top: 0;
     }
 
+    .box-list h4 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .box-list li {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    .biografia p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .box-black p {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 15px;
+    }
+
+    blockquote {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .midias [class*="icon-arrow-carrot-"] {
+        margin-top: -30px;
+    }
+
+    .profile {
+        padding-bottom: 50px;
+    }
+
+    .profile h1 {
+        font-size: 30px;
+    }
+
+    .profile h2 {
+        font-size: 20px;
+    }
+
+    .photo {
+        width: 200px;
+        height: 200px;
+        margin-top: -150px;
+    }
 
 }
 
@@ -223,7 +270,7 @@
     }
 
     .card {
-        margin-bottom: 16px;
+        margin-bottom: 16px !important;
     }
 
     .card .card-body {
@@ -259,6 +306,47 @@
         padding: 30px 0;
     }
 
+    blockquote {
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+    .profile {
+        padding-bottom: 15px;
+    }
+
+    .photo {
+        margin: 30px auto 20px;
+    }
+
+    .ingressos {
+        margin-top: 50px;
+    }
+
+    .profile h1 {
+        margin-top: 0;
+    }
+
+    .profile h1, .profile h2 {
+        text-align: center;
+    }
+
+    .listas.row-eq-height-xs {
+        display: block;
+    }
+
+    .social-networks.biografia {
+        padding-top: 0;
+    }
+
+    .midias .icon-arrow-carrot-left {
+        right: -15px;
+    }
+
+    .midias .icon-arrow-carrot-right {
+        left: -15px;
+    }
+
 }
 
 @media (max-width: 580px) {
@@ -270,6 +358,11 @@
 @media (max-width: 480px) {
     .slick-slider-for .text-mob{
         bottom: 100px;
+    }
+
+    .social-networks .social li {
+        margin: 0 5px;
+        zoom: 90%;
     }
 }
 

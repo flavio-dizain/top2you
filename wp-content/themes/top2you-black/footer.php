@@ -1,24 +1,7 @@
 	<footer>
-		<div class="top">
+		<div class="bottom">
 			<div class="container">
-				<h4>Acompanhe a top2you nas redes sociais</h4>
-				<ul class="social">
-					<?php 
-			 			wp_nav_menu( array(
-			 				'theme_location' => 'redes-sociais', 
-			 				'container' => false, 
-			 				'items_wrap' => '%3$s',
-		 					'fallback_cb' => false,
-		 					'link_before' => '<i class="icon icon-social-',
-		 					'link_after' => '"></i>',
-			 			) ); 
-			 		?>
-				</ul>
-			</div>
-		</div>
-			<div class="bottom">
-			<div class="container">
-				<p>A Top2You é uma aceleradora de desenvolvimento de pessoas. Acreditamos que uma conversa pode inspirar e encurtar distâncias, principalmente quando essa conversa é com alguém que já fez esse caminho e chegou lá. A Top2You te dá a chance de conversar com grandes nomes do mundo dos negócios, esportes e entretenimento de forma personalizada, focada em um assunto definido por você e utilizando uma tecnologia que torna isso simples e acessível.</p>
+				<p>A Top2You é uma aceleradora de desenvolvimento de pessoas. Acreditamos que uma conversa pode inspirar e encurtar distâncias, principalmente quando essa conversa é com alguém que já fez esse caminho e chegou lá.  A Top2You lhe dá a chance de conversar com grandes nomes do mundo dos negócios, esportes e entretenimento de forma personalizada, focada em um assunto definido por você e utilizando uma tecnologia que torna isso simples e acessível.</p>
 			</div>
 		</div>
 		<div class="midle">

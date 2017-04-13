@@ -50,6 +50,7 @@ function top2you_init_scripts() {
 	// Javascripts
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . "/js/jquery.min.js", array(), false, true );
+	wp_enqueue_script( 'progress', get_template_directory_uri() . "/js/progress.js", array( 'jquery' ), false, true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . "/js/bootstrap.min.js", array( 'jquery' ), false, true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . "/js/slick.min.js", array( 'jquery' ), false, true );
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . "/js/script.js", array( 'jquery' ), false, true );
@@ -196,3 +197,15 @@ function top2you_wp_video_shortcode( $output, $atts, $video, $post_id, $library 
 	return $output;
 }
 add_filter( 'wp_video_shortcode', 'top2you_wp_video_shortcode', 10, 5 );
+
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+ 
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+    $my_attr = 'v-code';
+ 
+    if ( isset( $atts[$my_attr] ) ) {
+        $out[$my_attr] = $atts[$my_attr];
+    }
+ 
+    return $out;
+}
