@@ -1,0 +1,35 @@
+# Copyright (C) 2016 CFS - Auto Loop Label
+# This file is distributed under the same license as the CFS - Auto Loop Label package.
+msgid ""
+msgstr ""
+"Project-Id-Version: CFS - Auto Loop Label 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cfs-auto-loop-"
+"label\n"
+"POT-Creation-Date: 2016-09-01 17:06:14+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-09-01 15:07-0300\n"
+"Last-Translator: \n"
+"Language-Team: Felipe Elia <contato@felipeelia.com.br>\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Plugin Name of the plugin/theme
+msgid "CFS - Auto Loop Label"
+msgstr "CFS - Auto Loop Label"
+
+#. Description of the plugin/theme
+msgid "CFS addon that auto label loops with the first textfield value."
+msgstr ""
+"Um addon para o CFS que nomeia automaticamente os itens dos loops de "
+"acordo com o valor do primeiro campo de texto."
+
+#. Author of the plugin/theme
+msgid "Felipe Elia"
+msgstr "Felipe Elia"
+
+#. Author URI of the plugin/theme
+msgid "http://felipeelia.com.br/"
+msgstr "http://felipeelia.com.br/"

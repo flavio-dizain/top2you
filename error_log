@@ -1,0 +1,6 @@
+[14-Mar-2017 20:32:48 Etc/GMT] PHP Warning:  require(/home/top2y7wn/public_html/wp-includes/load.php): failed to open stream: No such file or directory in /home/top2y7wn/public_html/wp-settings.php on line 19
+[14-Mar-2017 20:32:48 Etc/GMT] PHP Warning:  require(/home/top2y7wn/public_html/wp-includes/load.php): failed to open stream: No such file or directory in /home/top2y7wn/public_html/wp-settings.php on line 19
+[14-Mar-2017 20:32:48 Etc/GMT] PHP Fatal error:  require(): Failed opening required '/home/top2y7wn/public_html/wp-includes/load.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/top2y7wn/public_html/wp-settings.php on line 19
+[18-Mar-2017 21:39:26 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/top2y7wn/public_html/wp-content/themes/top2you/front-page.php on line 167
+[18-Mar-2017 21:39:29 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/top2y7wn/public_html/wp-content/themes/top2you/front-page.php on line 167
+[21-Mar-2017 15:06:19 UTC] PHP Fatal error:  Call to undefined function eventbrite_get_events() in /home/top2y7wn/public_html/wp-content/themes/top2you/front-page.php on line 83

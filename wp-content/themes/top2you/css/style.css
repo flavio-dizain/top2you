@@ -1,0 +1,653 @@
+/*DEFAULT*/
+* {
+	outline: none !important;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #45494e;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 0 0 20px;
+}
+
+h3 {
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 32px;
+	margin: 0 0 20px;
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 35px;
+	margin: 0 0 20px;
+}
+
+section {
+	padding: 50px 0;
+}
+
+
+/*ICON*/
+@font-face{
+	font-family:briteicons;
+	src:url(../fonts/briteicons.eot);
+	src:url(../fonts/briteicons.eot#iefix) format("embedded-opentype"),
+	url(../fonts/briteicons.woff2) format("woff2"),
+	url(../fonts/briteicons.woff) format("woff"),
+	url(../fonts/briteicons.svg#briteiconsregular) format("svg"),
+	url(../fonts/briteicons.ttf) format("truetype")
+}
+
+.ico, [class*=" ico-"], [class^=ico-] {
+    font-family: briteicons,Benton Sans,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    display: inline;
+    vertical-align: baseline;
+}
+
+.ico-share:before {
+    content: "";
+}
+
+.ico-bookmark:before {
+    content: "";
+}
+
+
+/*TYPE*/
+.text-light {font-weight: 300;}
+.text-regular {font-weight: 400;}
+.text-semi-bold {font-weight: 600;}
+.text-bold {font-weight: 700;}
+.text-extra-bold {font-weight: 800;}
+
+
+/*FORM*/
+.form-control {
+	border-radius: 0;
+	color: #45494e;
+	font-weight: 300;
+}
+
+.form-control:focus {
+    border-color: #415695;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-lg {
+    height: 50px;
+    padding: 18px 16px;
+    font-size: 18px;
+    border-radius: 0;
+}
+
+
+/*NAVBAR*/
+.navbar {
+	min-height: 100px;
+    margin-bottom: 0;
+}
+
+.nav>li>a {
+    padding: 10px 20px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+.navbar-nav>li>.btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+	margin-top: 22px;
+	border: none;
+	border-bottom: 2px solid #0d892d;
+}
+
+.navbar-default .navbar-nav>li>.btn {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>.btn:hover,
+.navbar-default .navbar-nav>li>.btn:active,
+.navbar-default .navbar-nav>li>.btn:focus,
+.navbar-default .navbar-nav>li>.btn:active:focus,
+.navbar-default .navbar-nav>li>.btn:hover:focus,
+.navbar-default .navbar-nav>li>.btn:hover:active {
+	color: #fff;
+	background-color: #0d892d;
+}
+
+
+/*BUTTON*/
+.btn {
+	border: none;
+	border-bottom: 2px solid;
+	padding: 13px 15px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.btn-default {
+	color: #fff;
+  	background-color: #666666;
+  	border-color: #474747;
+}
+
+.btn-default:focus, .btn-default.focus, .btn-default:hover, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default, .btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus  {
+	color: #fff;
+  	background-color: #474747;
+  	border-color: #474747;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #12c440;
+	border-color: #0d892d;
+}
+
+.btn-success:focus, .btn-success.focus, .btn-success:hover, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success, .btn-success:active:hover, .btn-success.active:hover, .open > .dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.active:focus, .open > .dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.active.focus, .open > .dropdown-toggle.btn-success.focus, .btn-success:active, .btn-success.active, .open > .dropdown-toggle.btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus  {
+	color: #fff;
+  	background-color: #0d892d;
+  	border-color: #0d892d;
+}
+
+.btn-primary {
+	color: #fff;
+  	background-color: #415695;
+  	border-color: #2d3c68;
+}
+
+.btn-primary:focus, .btn-primary.focus, .btn-primary:hover, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus  {
+	color: #fff;
+  	background-color: #2d3c68;
+  	border-color: #2d3c68;
+}
+
+
+/*CAROUSEL*/
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+
+#banner-home {
+	position: relative;
+}
+
+#banner-home .background {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#banner-home .background img {
+	width: 100%;
+	height: auto;
+	visibility: hidden;
+}
+
+#banner-home .container {
+	position: relative;
+}
+
+#banner-home .text {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	transform: -webkit-translateY(-50%);
+	transform: -moz-translateY(-50%);
+	transform: -ms-translateY(-50%);
+	transform: -o-translateY(-50%);
+}
+
+#banner-home h4 {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 46px;
+	color: #fff;
+	margin: 0 0 25px;
+}
+
+#banner-home p {
+	font-size: 25px;
+	font-weight: 300;
+	color: #fff;
+	margin: 0 0 25px;
+}
+
+#banner-home .indicators {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+#banner-home .text .content {
+	opacity: 0;
+	margin-left: 30px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#banner-home .item.active .text .content {
+	opacity: 1;
+	margin-left: 0;
+}
+
+#banner-home .indicators ol {
+	margin: 0;
+	padding: 0 0 30px;
+	position: inherit;
+    width: 100%;
+}
+
+#banner-home .indicators li {
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	float: left;
+	border: none;
+	margin: 0;
+}	
+
+#banner-home .indicators li + li {
+	margin-left: 10px;
+}
+
+#banner-home .indicators li.active {
+	background-color: #000;
+}
+
+
+.call h2 {
+	text-transform: uppercase;
+	margin: 0;
+	color: #999999;
+}
+
+
+/*CARD*/
+.card {
+	margin-bottom: 30px;
+	background-color: #fff;
+}
+
+.card .card-header {
+	display: block;
+	position: relative;
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.card .image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card .image img {
+	width: 100%;
+	height: auto;
+	visibility: hidden;
+}
+
+.card .price {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+	font-size: 16px;
+	color: #666666;
+	text-transform: uppercase;
+	padding: 2px 15px;
+	display: inline-block;
+}
+
+.card .card-body {
+	display: block;
+	padding: 10px 25px;
+	min-height: 130px;
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.card h5 {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+     line-height: 18px; 
+    /* max-height: 52px; */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card .card-footer {
+	display: block;
+	border-top: 1px solid #dddddd;
+}
+
+.card .card-footer:before,
+.card .card-footer:after {
+	display: table;
+	content: " ";
+}
+
+.card .card-footer:after {
+	clear: both;
+}
+
+.card .card-footer-left {
+	float: left;
+	padding: 10px 15px;
+	width: 75%;
+	width: calc(100% - 80px);
+	width: -webkit-calc(100% - 80px);
+	width: -moz-calc(100% - 80px);
+	width: -ms-calc(100% - 80px);
+	width: -o-calc(100% - 80px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .card-footer-left a {
+	font-size: 12px;
+	font-weight: 300;
+	padding: 0 2px;
+}
+
+.card .card-footer-right {
+	float: right;
+}
+
+
+.card .card-footer-right:before,
+.card .card-footer-right:after {
+	display: table;
+	content: " ";
+}
+
+.card .card-footer-right:after {
+	clear: both;
+}
+
+.card .card-footer-right > a {
+	float: left;
+	font-size: 20px;
+	border-left: 1px solid #dddddd;
+	padding: 5px 10px;
+}
+
+.card .card-footer a {
+	color: #45494e;
+}
+
+.card .card-footer a:hover {
+	text-decoration: none;
+	color: #0093d7;
+}
+
+.card h4 {
+	font-size: 12px;
+	font-weight: 400;
+	color: #45494e;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+}
+
+.card h5 {
+	font-size: 14px;
+	font-weight: 700;
+	color: #45494e;
+	text-transform: uppercase;
+}
+
+
+/*NEWS*/
+.news h2 {
+	margin: 0 0 50px;
+	text-align: center;
+	color: #999999;
+}
+
+
+/*FOOTER*/
+footer {
+	background-color: #1f252a;
+	padding: 50px 0;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 300;
+	line-height: 22px;
+}
+
+footer .info img {
+	margin-bottom: 45px;
+	width: auto;
+	max-width: 100%;
+}
+
+footer .info span {
+	display: block;
+}
+
+footer .info p {
+	font-size: 12px;
+	line-height: 24px;
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+}
+
+footer ul:before,
+footer ul:after {
+	display: table;
+	content: " ";
+}
+
+footer ul:after {
+	clear: both;
+}
+
+footer li {
+	list-style: none;
+	float: left;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+footer li + li {
+	margin-left: 25px;
+}
+
+footer li a {
+	color: inherit !important;
+}
+footer li a .icon {
+	font-size: 35px;
+}
+
+footer .footer-right > div:nth-child(1) {
+	padding: 25px 0 70px;
+}
+
+footer .footer-right > div:nth-child(2) {
+	padding-bottom: 45px;
+}
+
+footer .footer-right > div:nth-child(2) a {
+	text-decoration: none !important;
+}
+
+footer .footer-right > div:nth-child(2) a:hover {
+	color: #bfbfbf !important;
+}
+
+footer .footer-right > div:nth-child(3) p {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0;
+    width: calc(100% - 20px);
+    width: -webkit-calc(100% - 20px);
+    width: -moz-calc(100% - 20px);
+    width: -ms-calc(100% - 20px);
+    width: -o-calc(100% - 20px);
+}
+
+
+/*MODAL*/
+.modal-backdrop.in {
+	opacity: 0.8;
+}
+
+.modal-dialog {
+    width: 730px;
+}
+
+.modal-header {
+	padding: 10px;
+	border: none;
+}
+
+.modal-header a {
+	color: #000000;
+	font-size: 18px;
+	float: right;
+}
+
+.modal-body {
+	padding: 20px 30px 60px;
+}
+
+.modal-content {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+	border-radius: 0;
+}
+.modal-content * {
+	font-weight: 400;
+	color: #666666;
+}
+
+.modal-content h2 {
+	margin: 0 0 30px;
+	color: #000000;
+}
+
+.modal-content ul {
+	margin: 0;
+	padding: 0;
+}
+
+.modal-content ol {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+.modal-content ol ol {
+	padding: 30px 0 0 40px;
+}
+
+.modal-content ol li {
+	list-style-type:decimal;
+}
+
+.modal-content ol li {
+	list-style-type:lower-alpha;
+	margin: 0 0 30px;
+}
+
+.modal del {
+    text-decoration: none;
+}
+
+.modal del>strong>a {
+	margin-top: 25px;
+    font-size: 13px;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    padding: 0 20px 16px;
+    width: 170px;
+    text-indent: -40px;
+    padding-left: 60px;
+    line-height: 16px;
+    background-color: #fff;
+    text-decoration: none !important;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.modal del>strong>a:hover {
+	background-color: #ddd;
+}
+
+.modal del>strong>a:before {
+    display: inline-block;
+    content: " ";
+    background: url(../img/icon-pdf.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 18px;
+}
