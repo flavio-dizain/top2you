@@ -63,8 +63,8 @@
 			</div>
 		</div>
 		<?php
-	}
 
+	}
 
 	// Chamada
 	$chamada = CFS()->get( 'chamada' );
@@ -81,9 +81,11 @@
 		</section>
 		<?php
 	}
+
 		?>
 
 		<?php $args = array('post_type'=>'speakers'); query_posts($args); ?>
+
 		<section id="eventos">
 			<div class="container">
 				<div class="row">
@@ -92,12 +94,14 @@
 					</div>
 				</div>
 				<div class="row">
+
 					<?php while(have_posts()): the_post(); ?>
 
 							<div class="col-sm-6">
 								<a href="<?php the_permalink(); ?>" class="card">
 									<div class="card-header">
 										<div class="image" style="background-image: url(<?php  ?>);">
+
 											<img src="<?php echo get_template_directory_uri() ?>/img/card-height.jpg">
 										</div>
 									</div>
@@ -107,9 +111,11 @@
 										echo isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
 									</div>
 									<div class="card-footer">
+
 										<?php
 											// Tags foram removidas (http://stackoverflow.com/questions/13380228/eventbrite-tags)
 											// Alterados para categoria, subcategoria e formato
+
 
 											$fake_tags = array( 'category', 'subcategory', 'format' );
 											$links = array();
@@ -137,9 +143,11 @@
 								</a>
 							</div>
 							<?php endif; ?>
+
 						<?php
 
 						$i++;
+
 						}
 					?>
 				</div>
@@ -210,6 +218,7 @@
  					'link_before' => '<i class="icon icon-social-',
  					'link_after' => '"></i>',
 	 			) );
+
 	 		?>
 		</ul>
 	</div>
@@ -274,4 +283,5 @@
 		});
 	});
 </script>
+
 <?php endif; endif; ?>

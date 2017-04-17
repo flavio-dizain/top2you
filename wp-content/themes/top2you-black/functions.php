@@ -63,7 +63,11 @@ function top2you_document_title_separator( $separator ) {
 add_filter( 'document_title_separator', 'top2you_document_title_separator' );
 
 function youtube_id_from_url( $url ) {
+<<<<<<< HEAD
     $pattern =
+=======
+    $pattern =
+>>>>>>> 470d3998a17a3464957ada3f2bad35651ad8d997
         '%^# Match any youtube URL
         (?:https?://)?  # Optional scheme. Either http or https
         (?:www\.)?      # Optional www subdomain
@@ -92,7 +96,11 @@ function top2you_pagination( $query = NULL, $range = 2, $get_param = NULL ) {
 	}
 
 	// Sem paginação se só tem uma página
+<<<<<<< HEAD
 	if( $query->max_num_pages <= 1 ) {
+=======
+	if( $query->max_num_pages <= 1 ) {
+>>>>>>> 470d3998a17a3464957ada3f2bad35651ad8d997
 		return;
 	}
 
