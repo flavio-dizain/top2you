@@ -63,11 +63,8 @@ function top2you_document_title_separator( $separator ) {
 add_filter( 'document_title_separator', 'top2you_document_title_separator' );
 
 function youtube_id_from_url( $url ) {
-<<<<<<< HEAD
+
     $pattern =
-=======
-    $pattern =
->>>>>>> 470d3998a17a3464957ada3f2bad35651ad8d997
         '%^# Match any youtube URL
         (?:https?://)?  # Optional scheme. Either http or https
         (?:www\.)?      # Optional www subdomain
@@ -89,6 +86,14 @@ function youtube_id_from_url( $url ) {
     return false;
 }
 
+function instagram_post_id($url)
+{
+	//https://www.instagram.com/p/BS_hafUFs_U
+	$parsed = parse_url($url);
+	$e = explode('/', $parsed['path']);
+	return $e[2];
+}
+
 function top2you_pagination( $query = NULL, $range = 2, $get_param = NULL ) {
 	global $wp_query;
 	if ( ! $query ) {
@@ -96,11 +101,7 @@ function top2you_pagination( $query = NULL, $range = 2, $get_param = NULL ) {
 	}
 
 	// Sem paginação se só tem uma página
-<<<<<<< HEAD
 	if( $query->max_num_pages <= 1 ) {
-=======
-	if( $query->max_num_pages <= 1 ) {
->>>>>>> 470d3998a17a3464957ada3f2bad35651ad8d997
 		return;
 	}
 
@@ -233,3 +234,5 @@ function create_post_type() {
     )
   );
 }
+
+//flush_rewrite_rules();

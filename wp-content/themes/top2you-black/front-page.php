@@ -81,10 +81,9 @@
 		</section>
 		<?php
 	}
-
 		?>
 
-		<?php $args = array('post_type'=>'speakers'); query_posts($args); ?>
+		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;  $args = array('post_type'=>'speakers','posts_per_page' => 12, 'paged' => $paged ); query_posts($args); ?>
 
 		<section id="eventos">
 			<div class="container">
@@ -93,48 +92,23 @@
 						<!-- <h4 style="color: #fff;"><?php //echo CFS()->get( 'eventos_titulo' ) ?></h4> -->
 					</div>
 				</div>
-				<div class="row">
+				<div id="main" class="row">
 
 					<?php while(have_posts()): the_post(); ?>
 
-							<div class="col-sm-6">
+							<div class="col-sm-6 item_post">
 								<a href="<?php the_permalink(); ?>" class="card">
 									<div class="card-header">
-										<div class="image" style="background-image: url(<?php  ?>);">
+										<div class="image" style="background-image: url(<?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium'); echo $img[0]; ?>);">
 
 											<img src="<?php echo get_template_directory_uri() ?>/img/card-height.jpg">
 										</div>
 									</div>
 									<div class="card-body">
-										<?php
-										$tit = explode('-', $evento->post_title);
-										echo isset($tit[1]) ? '<h4>'.$tit[0].'</h4><h5>'.$tit[1].'</h5>' : '<h5>'.$evento->post_title.'</h5>'; ?>
+										<h4><?php the_title(); ?></h4>
+										<h5><?php the_excerpt(); ?></h5>
 									</div>
 									<div class="card-footer">
-
-										<?php
-											// Tags foram removidas (http://stackoverflow.com/questions/13380228/eventbrite-tags)
-											// Alterados para categoria, subcategoria e formato
-
-
-											$fake_tags = array( 'category', 'subcategory', 'format' );
-											$links = array();
-											foreach ( $fake_tags as $tag ) {
-												if ( isset( $evento->{$tag}->short_name_localized ) ) {
-													$links[] = $evento->{$tag}->short_name_localized;
-												}
-											}
-
-											if ( count( $links ) ) {
-												?>
-												<div class="card-footer-left">
-													<?php foreach ( $links as $link ) { ?>
-														<a href="<?php echo $evento->url ?>">#<?php echo $link ?></a>
-													<?php } ?>
-												</div>
-												<?php
-											}
-										?>
 										<!--div class="card-footer-right">
 											<a href="#"><i class="ico-share"></i></a>
 											<a href="#"><i class="ico-bookmark"></i></a>
@@ -142,29 +116,22 @@
 									</div>
 								</a>
 							</div>
-							<?php endif; ?>
+						<?php endwhile; wp_reset_query(); ?>
 
-						<?php
-
-						$i++;
-
-						}
-					?>
 				</div>
-				<?php if ( $eventos->pagination->page_count > $eventos->pagination->page_number) { ?>
+
+
 					<div class="row">
 						<div class="col-sm-2 col-sm-push-5">
-							<a href="<?php the_permalink(); echo '?page=' . ( $eventos->pagination->page_number + 1 ) ?>" class="btn btn-default btn-block text-uppercase"><?php echo CFS()->get( 'eventos_botao' ) ?></a>
+
+							<?php echo get_previous_posts_link( 'Ver mais' ); ?>
+							
 						</div>
 					</div>
-				<?php } ?>
+
 			</div>
 		</section>
-		<?php
-	}
 
-
-?>
 <section id="gift">
 	<div class="container">
 		<div class="zoom">

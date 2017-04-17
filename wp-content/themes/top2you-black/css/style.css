@@ -534,7 +534,7 @@ section {
 	font-weight: 400;
 	color: #8b8b8b;
 	text-transform: uppercase;
-	margin: 0;	
+	margin: 0;
 }
 
 .slick-slider-nav .slick-current {
@@ -631,7 +631,7 @@ section {
 	-moz-transition: all 10s ease;
 	-ms-transition: all 10s ease;
 	-webkit-transition: all 10s ease;
-	-o-transition: all 10s ease;	
+	-o-transition: all 10s ease;
 }
 .card:hover .image {
 	transform: scale(1.15);
@@ -640,7 +640,7 @@ section {
 	-o-transform: scale(1.15);
 	-ms-transform: scale(1.15); /* IE 9 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand')"; /* IE8 */
-	filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand'); /* IE6 and 7 */ 	
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand'); /* IE6 and 7 */
 }
 
 .card .image:after {
@@ -702,7 +702,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-     line-height: 18px; 
+     line-height: 18px;
      margin-bottom: -2px;
      letter-spacing: initial;
     /* max-height: 52px; */
@@ -815,7 +815,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-size: 14px;
 	color: #ffffff;
 	font-weight: 400;
-	line-height: 22px;	
+	line-height: 22px;
 	padding: 50px 0;
 	text-align: center;
 }
@@ -839,7 +839,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 
 .social-networks .social a {
-	text-decoration: none !important; 
+	text-decoration: none !important;
 }
 
 .social-networks .social .icon:after {
@@ -1259,7 +1259,7 @@ footer .info p a {
 	-moz-transition: all 10s ease;
 	-ms-transition: all 10s ease;
 	-webkit-transition: all 10s ease;
-	-o-transition: all 10s ease;	
+	-o-transition: all 10s ease;
 }
 
 .zoom:hover img {
@@ -1269,7 +1269,7 @@ footer .info p a {
 	-o-transform: scale(1.15);
 	-ms-transform: scale(1.15); /* IE 9 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand')"; /* IE8 */
-	filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand'); /* IE6 and 7 */ 		
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=1.15, M12=0, M21=0, M22=1.15, SizingMethod='auto expand'); /* IE6 and 7 */
 }
 
 
@@ -1383,7 +1383,7 @@ footer .info p a {
 }
 
 .profile {
-	padding-bottom: 85px;
+	padding-bottom: 50px;
 }
 
 .profile h1 {
@@ -1516,7 +1516,7 @@ footer .info p a {
 	    display: -webkit-flex;
 	    display: -ms-flexbox;
 	    display: flex;
-	}	
+	}
 }
 
 @media (min-width: 992px) {
@@ -1525,7 +1525,7 @@ footer .info p a {
 	    display: -webkit-flex;
 	    display: -ms-flexbox;
 	    display: flex;
-	}	
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1536,11 +1536,3 @@ footer .info p a {
 	    display: flex;
 	}
 }
-
-
-
-
-
-
-
-
